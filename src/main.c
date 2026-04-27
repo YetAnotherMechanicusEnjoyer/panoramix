@@ -4,7 +4,7 @@
 
 void run(shared_data_t* data) {
   pthread_t druid_thread;
-  pthread_create(&druid_thread, NULL, druid_routine, &data);
+  pthread_create(&druid_thread, NULL, druid_routine, data);
 
   pthread_t* villager_threads = malloc(sizeof(pthread_t) * data->nb_villagers);
   villager_t* villagers = malloc(sizeof(villager_t) * data->nb_villagers);
